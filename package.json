@@ -1,0 +1,35 @@
+{
+  "name": "delaunay2d",
+  "version": "1.0.0",
+  "description": "Proof of concept of the Delaunay Triangulation algorithm.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianCRA/delaunay2d.git"
+  },
+  "keywords": [
+    "Delaunay"
+  ],
+  "author": "JulianCRA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JulianCRA/delaunay2d/issues"
+  },
+  "homepage": "https://github.com/JulianCRA/delaunay2d#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-preset-env": "^1.7.0",
+    "delaunator": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "p5": "^0.7.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
