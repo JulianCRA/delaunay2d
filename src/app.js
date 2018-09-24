@@ -114,6 +114,7 @@ document.getElementById("threshold").addEventListener("input", applyThreshold, f
 document.getElementById("strweight").addEventListener("input", applyweight, false);
 document.getElementById("mmax").addEventListener("change", applymax, false);
 document.getElementById("mmin").addEventListener("change", applymin, false);
+document.getElementById("savebtn").addEventListener("click", save, false);
 
 function applyThreshold(){
 	p5instance.toThreshold(this.value);
@@ -126,4 +127,7 @@ function applymin(){
 }
 function applyweight(){
 	p5instance.setw(this.value);
+}
+function save(){
+	p5instance.save();
 }
