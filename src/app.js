@@ -9,7 +9,7 @@ let img64;
 
 
 const sketch = (p) => {
-	let img, temp, min, max, weight;
+	let img, temp, min, max, weight, delaunay, points;
 	
 	p.preload = () => {
 		temp = p.loadImage(img64);
@@ -43,7 +43,7 @@ const sketch = (p) => {
 	p.toDelaunay = () => {
 		img.loadPixels();
 		//console.log(img.pixels);
-		let points = [];
+		points = [];
 		let yy, xx;
 		for(let i = 0; i < img.pixels.length; i+=4){
 			xx = Math.floor((i/4) % _WIDTH);
@@ -57,7 +57,11 @@ const sketch = (p) => {
 		}
 		
 		//console.log(points);
-		let delaunay = Delaunator.from(points);
+		delaunay = Delaunator.from(points);
+		p.drawTriangles();
+	}
+
+	p.drawTriangles = () => {
 		
 		p.background(0);
 		p.strokeWeight(weight);
@@ -83,7 +87,7 @@ const sketch = (p) => {
 
 	p.setw = (m) => {
 		weight = m;
-		p.toDelaunay();
+		p.drawTriangles();
 	}
 }
 
